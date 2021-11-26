@@ -24,7 +24,7 @@ body {
     font-size: 17px;
 }
 
-/* The Wrapper */
+/* Window Wrapper */
 /* Items are indented for clarity and readability */
 .exp-window {
 	display: block;
@@ -40,6 +40,7 @@ body {
 	.tx-box { 
 		display: block;
 		width: 60%;
+		height: 40%;
 		background-color: rgb(40, 255, 90);
 		margin: auto;
 		transform: translate(0, 210%);
@@ -47,25 +48,40 @@ body {
 	}
 
 	#tx-box-text {
-		z-index:  1;
 		display: inline-block;
 		margin-top:  0.5em;
 		margin-bottom:  0.5em;
 		margin-left: 0.5em;
 		vertical-align: top !important;
 		width:  97%;
-		height:  10em;
+		/*background-color: black;*/
+		height: 90%;
 
 	}
 		/* Not actually nested but it's physically "inside tx-box-text" */
 		#text-options {
-			position:  absolute;
+			position: absolute;
 			display: block;
 			bottom: 0.8em;
-			left:  62%;
-			width:  15em;
-			height:  5em;
+			left: 62%;
+			width: 36%;
+			height: 50%;
 			background-color:  blue;
 		}
 
+.option {
+	position: absolute;
+}
+
+#option0 {
+	top: 0%;
+}
+
+#option1 {
+	top: 30%;
+}
+
+#option2 {
+	top: 60%;
+}
 

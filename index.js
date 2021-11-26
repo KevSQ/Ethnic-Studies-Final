@@ -3,11 +3,13 @@
 
 
 document.addEventListener("DOMContentLoaded", function() {
-	document.getElementById("player-window").style.visibility = "visible";
-	console.log(dialogue);
-	writeText("tx-box-text", dialogue[0].mexicoEvent[0].dialogue, 35);
-	console.log("done");
+	//Variables
+	var optionMenu = document.getElementById("text-options"); 
+	var textSpeed = 30;
 
+	document.getElementById("player-window").style.visibility = "visible";
+	writeText("tx-box-text", dialogue[0].mexicoEvent[0].dialogue, textSpeed);
+	presentOptions(["test","test", "this is"]);
 
 	//Functions
 	function writeText (id, text, delay) {
@@ -24,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	//Anticipates array of options
 	function presentOptions(choices) {
-
+		for (var i = 0; i < choices.length; i++) {
+			writeText("option" + i, choices[i], textSpeed);
+		}
 	}
 });
