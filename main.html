@@ -8,13 +8,22 @@
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-	<script src="index.js"></script>
+  <body onload="console.log('Project has been accessed');">
+  	<script type="text/javascript" src="data/text.js"></script>
+  	<script src="require.js"></script>
+	<script type="text/javascript" src="index.js"></script>
 	<div class="top-bar">
+			<a class="top-bar-item" href="html/about.html"> Home </a>
+			<a class="top-bar-item" href="html/about.html"> About The Project </a>
 			<a class="top-bar-item" href="html/about.html"> About Us </a>
-			<a class="top-bar-item" href="html/about.html"> About Us </a>
-			<a class="top-bar-item" href="html/about.html"> About Us </a>
-			<a class="top-bar-item" href="html/about.html"> About Us </a>
+			<a class="top-bar-item" href="html/about.html"> Credits </a>
+	</div>
+	<div class="exp-window" id="player-window">
+		<div class="tx-box">
+			<div id="tx-box-text"> </div> <!-- Changed my JS, leave empty -->
+			<div id="text-options"> </div>
+		</div>
+
 	</div>
   </body>
 </html>

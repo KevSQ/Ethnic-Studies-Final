@@ -23,3 +23,49 @@ body {
     text-decoration: none;
     font-size: 17px;
 }
+
+/* The Wrapper */
+/* Items are indented for clarity and readability */
+.exp-window {
+	display: block;
+	visibility: hidden;
+	position: relative;
+	width: 70%;
+	height: 30em;
+	background:  red;
+	margin:  auto;
+	margin-top: 7%;
+}
+
+	.tx-box { 
+		display: block;
+		width: 60%;
+		background-color: rgb(40, 255, 90);
+		margin: auto;
+		transform: translate(0, 210%);
+		border: 3px solid black;
+	}
+
+	#tx-box-text {
+		z-index:  1;
+		display: inline-block;
+		margin-top:  0.5em;
+		margin-bottom:  0.5em;
+		margin-left: 0.5em;
+		vertical-align: top !important;
+		width:  97%;
+		height:  10em;
+
+	}
+		/* Not actually nested but it's physically "inside tx-box-text" */
+		#text-options {
+			position:  absolute;
+			display: block;
+			bottom: 0.8em;
+			left:  62%;
+			width:  15em;
+			height:  5em;
+			background-color:  blue;
+		}
+
+
