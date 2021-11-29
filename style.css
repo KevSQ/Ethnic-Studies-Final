@@ -5,7 +5,7 @@
 body {
 	margin: 0;
 	background-size: cover;
-	background-image: url("assets/kiwihug-y_2GC4EhOP4-unsplash.jpg");
+	background-image: url("assets/background.jpg");
 }
 
 .top-bar {
@@ -30,58 +30,97 @@ body {
 	display: block;
 	visibility: hidden;
 	position: relative;
+	border: 3px solid white;
 	width: 70%;
 	height: 30em;
-	background:  red;
-	margin:  auto;
+	background: #171717;
+	margin: auto;
 	margin-top: 7%;
+	/* background: linear-gradient(#000, #000) no-repeat center/2px 100%; */
 }
 
 	.tx-box { 
 		display: block;
 		width: 60%;
 		height: 40%;
-		background-color: rgb(40, 255, 90);
+		background-color: black;
 		margin: auto;
 		transform: translate(0, 210%);
-		border: 3px solid black;
+		border: 3px solid white;
+		/* background: linear-gradient(#000, #000) no-repeat center/2px 100%; */
 	}
-
+	#tx-box-name {
+		display: inline-block;
+		margin-top: 0.3em;
+		margin-left: 0.25em;
+		font-family: 'VT323', monospace;
+		font-size:  180%;
+		color: white;
+		letter-spacing: 1px;
+	}
 	#tx-box-text {
 		display: inline-block;
-		margin-top:  0.5em;
+		margin-top: 0.3em;
 		margin-bottom:  0.5em;
-		margin-left: 0.5em;
-		vertical-align: top !important;
+		margin-left: 0.25em;
 		width:  97%;
-		/*background-color: black;*/
 		height: 90%;
+		font-family: 'VT323', monospace;
+		font-size: 160%;
+		color: white;
+		letter-spacing: 1px;
+
 
 	}
 		/* Not actually nested but it's physically "inside tx-box-text" */
 		#text-options {
 			position: absolute;
 			display: block;
-			bottom: 0.8em;
-			left: 62%;
-			width: 36%;
-			height: 50%;
-			background-color:  blue;
+			border: 3px solid white;
+			top: 70%;
+			left: 75%;
+			width: 35%;
+			height: 60%;
+			background-color: black;
 		}
 
 .option {
 	position: absolute;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: context-menu;
+	font-size: 120%;
+	letter-spacing: 0.1px;
+	color: white;
 }
 
-#option0 {
-	top: 0%;
+.option:hover {
+	color: red;
 }
 
-#option1 {
-	top: 30%;
-}
+	#option0 {
+		font-family: 'VT323', monospace;
+		top: 0%;
+	}
 
-#option2 {
-	top: 60%;
-}
+	#option1 {
+		font-family: 'VT323', monospace;
+		top: 30%;
+	}
 
+	#option2 {
+		font-family: 'VT323', monospace;
+		top: 60%;
+	}
+
+.animation {
+	position: absolute;
+	width: 40%;
+	left: 30%; /* Absolute Center of the experience window. Test with linear-gradient line draw */
+	/* background: linear-gradient(#000, #000) no-repeat center/2px 100%; */
+	top: 35%;
+	background-color: none;
+
+
+}

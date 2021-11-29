@@ -5,11 +5,12 @@
 document.addEventListener("DOMContentLoaded", function() {
 	//Variables
 	var optionMenu = document.getElementById("text-options"); 
-	var textSpeed = 30;
+	var textSpeed = 20;
 
 	document.getElementById("player-window").style.visibility = "visible";
-	writeText("tx-box-text", dialogue[0].mexicoEvent[0].dialogue, textSpeed);
-	presentOptions(["test","test", "this is"]);
+	writeText("tx-box-name", dialogue.mexicoEvent[0].name, textSpeed);
+	writeText("tx-box-text", dialogue.mexicoEvent[0].dialogue, textSpeed);
+	presentOptions(dialogue.eventOptions[0].options);
 
 	//Functions
 	function writeText (id, text, delay) {
