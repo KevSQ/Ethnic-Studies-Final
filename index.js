@@ -4,13 +4,16 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 	//Variables
-	let optionMenu = document.getElementById("text-options")
+	//All text option objects are in optionControl array
+	let optionControl = [document.getElementById("option0"), document.getElementById("option1"), document.getElementById("option2")]
 	, playerWindow = document.getElementById("player-window")
 	, dialogueName = document.getElementById("tx-box-name")
 	, dialogueText = document.getElementById("tx-box-text")
-	//All text option objects are in optionControl array
-	, optionControl = [document.getElementById("option0"), document.getElementById("option1"), document.getElementById("option2")]
-	, textSpeed = 20;
+	, optionMenu = document.getElementById("text-options")
+	, textSpeed = 20
+	, oneCounter = 0
+	, twoCounter = 0
+	, threeCounter = 0;
 	playerWindow.style.visibility = "visible";
 
 	if (optionControl) {

@@ -17,3 +17,15 @@ const dialogue = {
 			{"options" : ["► Quit", "► Find New Job", "► Get Immigration Lawyer"] },
 	]
 };
+
+
+/*
+
+To-do:
+
+	- Send Screenshots of the website (even if its temporary, we just need something for the slides)
+	- Plug everything in and find the scenario for the mexicoEVent
+	- idk some other shit just finish
+
+
+*/
