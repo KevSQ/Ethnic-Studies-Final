@@ -5,11 +5,11 @@
 body {
 	margin: 0;
 	background-size: cover;
-	background-image: url("assets/background.jpg");
+	background-color: #202124;
 }
 
 .top-bar {
-	background-color: rgb(40,42,53);
+	background-color: black;
 	width: 100%;
 	overflow: hidden;
 	height: 44px;
@@ -21,6 +21,8 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family:  'VT323', monospace;
+    letter-spacing: 1px;
     font-size: 17px;
 }
 
@@ -54,7 +56,7 @@ body {
 		margin-top: 0.3em;
 		margin-left: 0.25em;
 		font-family: 'VT323', monospace;
-		font-size:  180%;
+		font-size:  2vw;
 		color: white;
 		letter-spacing: 1px;
 	}
@@ -66,7 +68,7 @@ body {
 		width:  97%;
 		height: 90%;
 		font-family: 'VT323', monospace;
-		font-size: 160%;
+		font-size: 1.6vw;
 		color: white;
 		letter-spacing: 1px;
 
@@ -74,12 +76,13 @@ body {
 	}
 		/* Not actually nested but it's physically "inside tx-box-text" */
 		#text-options {
+			visibility: hidden;
 			position: absolute;
 			display: block;
 			border: 3px solid white;
 			top: 70%;
 			left: 75%;
-			width: 35%;
+			width: 40%;
 			height: 60%;
 			background-color: black;
 		}
@@ -90,7 +93,7 @@ body {
 	outline: none;
 	background: none;
 	cursor: context-menu;
-	font-size: 120%;
+	font-size: 1.5vw;
 	letter-spacing: 0.1px;
 	color: white;
 }
@@ -119,7 +122,7 @@ body {
 	width: 40%;
 	left: 30%; /* Absolute Center of the experience window. Test with linear-gradient line draw */
 	/* background: linear-gradient(#000, #000) no-repeat center/2px 100%; */
-	top: 35%;
+	top: 30%;
 	background-color: none;
 
 

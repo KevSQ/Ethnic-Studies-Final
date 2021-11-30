@@ -4,16 +4,16 @@ const dialogue = {
 	//dialogue[0]
 	"mexicoEvent": [ //dialogue[0].mexicoEvent
 			{	//dialogue[0].mexicoEvent[0].name OR dialogue
-				"name" : "You",
+				"name" : "",
 				//You must manually add newline breaks. HTML uses <pre> tag
-				"dialogue" : "This is a test of the JSON file format and also a size test because I want to see what happens if the text stretches outside of its own container."
+				"dialogue" : "Welcome to our interactive experience"
 			},
 			{
 				"name" : "Boss",
-				"dialogue" : "Another Test lmfao"
+				"dialogue" : "This is what the boss will say. Ideally the rest of development will just be writing this and placing animations."
 			}
 	],
 	"eventOptions": [
-			{"options" : ["► Quit", "► Find New Job", "► Get Immigration Lawyer"] }
+			{"options" : ["► Quit", "► Find New Job", "► Get Immigration Lawyer"] },
 	]
 };
