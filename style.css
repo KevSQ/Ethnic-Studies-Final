@@ -1,6 +1,7 @@
 
 body {
 	margin: 0;
+	overflow-x: hidden;
 }
 
 
@@ -60,7 +61,7 @@ body {
 	border: 4px solid white;
 	width: 65vw;
 	height: 50vh;
-	background: #171717;
+	background: rgba(0, 0, 0, 0.8);
 	margin: auto;
 	margin-top: 8%;
 	z-index: 1;
@@ -91,7 +92,7 @@ body {
 		margin-top: 0.3em;
 		margin-bottom:  0.5em;
 		margin-left: 0.25em;
-		width:  97%;
+		width:  95%;
 		height: 90%;
 		font-family: 'VT323', monospace;
 		font-size: 1.6vw;
@@ -106,7 +107,7 @@ body {
 			position: absolute;
 			display: block;
 			border: 3px solid white;
-			top: 65%;
+			top: 70%;
 			left: 75%;
 			width: 40%;
 			height: 60%;
@@ -156,6 +157,12 @@ body {
 		top: 30%;
 	}
 
+	#carrot_cry {
+		width: 20%;
+		left: 40%;
+		top: 30%;
+	}
+
 	#white {
 		width: 20%;
 		left: 40%;
@@ -164,6 +171,42 @@ body {
 
 	#orange {
 		transform: scaleX(-1);
+		width: 20%;
+		left: 40%;
+		top: 30%;
+	}
+
+	#dollar_confirmed {
+		width: 20%;
+		left: 40%;
+		top: 30%;
+	}
+
+	#dollar_rejected {
+		width: 20%;
+		left: 40%;
+		top: 30%;
+	}
+
+	#papers_confirmed {
+		width: 20%;
+		left: 40%;
+		top: 30%;
+	}
+
+	#papers_rejected {
+		width: 20%;
+		left: 40%;
+		top: 30%;
+	}
+
+	#border_map {
+		width: 25%;
+		left: 37%;
+		top: 10%;
+	}
+
+	#food_bowl {
 		width: 20%;
 		left: 40%;
 		top: 30%;

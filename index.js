@@ -11,26 +11,33 @@ document.addEventListener("DOMContentLoaded", function() {
 	, dialogueText = document.getElementById("tx-box-text")
 	, optionMenu = document.getElementById("text-options")
 	, animationControl = document.getElementsByClassName("animation")
-	, textSpeed = 20
+	, textSpeed = 10
 	, eventID1 = 0
 	, eventID2 = 0
-	, eventID3 = 0;
+	, eventID3 = 0
+	, canWrite = true;
 
 	//Show Game Window on load and load initial frame.
 	playerWindow.style.visibility = "visible";
 	hideAll();
-	loadNextFrame(null, "white", 3, 3);
+	//Load Initial three frames; startup before gameplay takes about 16 seconds.
+	loadNextFrame(null, null, 11, 6);
+	setTimeout( () => { loadNextFrame(null, null, 12, 6)}, 8000 );
+	setTimeout( () => { loadNextFrame(null, null, 13, 6)}, 16000 );
+	loadNextFrame(null, "white", )
 	/* How Frame drawing works: After verifying all button objects exist, we attach
 	event listeners to them. When any of the three buttons is pressed, we check which
 	event number we're at for each individual button (i.e., each button has its own
 	tracker to make it easy to track what frame/event needs to be loaded next).
 	After loading, we return and exit the switch */
+
+	//setTimeout( () => { loadNextFrame})
 	if (optionControl) {
 		optionControl[0].addEventListener("click", () => {
 			switch (eventID1) {
 				//Quit
 				case 0:
-					loadNextFrame("all", "white", 0, 0);
+					loadNextFrame("all", "food_bowl", 0, 0);
 					eventID1 = 1;
 					return
 				case 1:
@@ -43,19 +50,39 @@ document.addEventListener("DOMContentLoaded", function() {
 			switch (eventID2) {
 				case 0:
 					loadNextFrame("all", "orange", 1, 1);
-					eventID2 = parseInt(weightedRandom({1:0.8, 2:0.2}));
+					eventID2 = parseInt(weightedRandom({1:0.8, 2:0.05, 3:0.05, 4:0.05, 5:0.05}));
 					return
 				case 1:
 					loadNextFrame("all", "orange", 2, 1);
 					eventID2 = 0;
 					return
 				case 2:
-					loadNextFrame("all", "dollar_confirmed", 3, 3);
+					loadNextFrame("all", "dollar_confirmed", 4, 3);
+					return
+				case 3:
+					loadNextFrame("all", "dollar_confirmed", 5, 3);
+					return
+				case 4:
+					loadNextFrame("all", "dollar_confirmed", 6, 3);
+					return
+				case 5:
+					loadNextFrame("all", "dollar_confirmed", 7, 3);
 					return
 			}
 		});
 		optionControl[2].addEventListener("click", () => {
-
+			switch (eventID3) {
+				case 0:
+					loadNextFrame("all", "white", 8, 2);
+					eventID3 = parseInt(weightedRandom({1:0.7, 2:0.3}));
+					return
+				case 1:
+					loadNextFrame("all", "papers_rejected", 9, 2);
+					return
+				case 2:
+					loadNextFrame("all", "papers_confirmed", 10, 2);
+					return
+			}
 		});
 	}
 
@@ -79,6 +106,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		writeText(dialogueName, dialogue.mexicoEvent[databaseNumber].name, textSpeed);
 		writeText(dialogueText, dialogue.mexicoEvent[databaseNumber].dialogue, textSpeed);
 		(arguments.length == 3) ? presentOptions(databaseNumber) : presentOptions(optionNumber);
+		// if (arguments.length == 4 && arguments[3] == 1) {
+		// }
 	}
 	/* Writes to target Element object one character at a time. */
 	function writeText(target, text, delay) {
