@@ -1,11 +1,9 @@
-:root {
-
-}
 
 body {
 	margin: 0;
-	background-size: cover;
-	background-color: #202124;
+	background-size: contain;
+/*	background:  url("assets/backgrounds/sky.png");*/
+    background-color: #202124;
 }
 
 .top-bar {
@@ -76,7 +74,7 @@ body {
 	}
 		/* Not actually nested but it's physically "inside tx-box-text" */
 		#text-options {
-			visibility: hidden;
+			opacity: 0;
 			position: absolute;
 			display: block;
 			border: 3px solid white;
@@ -118,12 +116,11 @@ body {
 	}
 
 .animation {
+	opacity: 1;
 	position: absolute;
 	width: 40%;
 	left: 30%; /* Absolute Center of the experience window. Test with linear-gradient line draw */
 	/* background: linear-gradient(#000, #000) no-repeat center/2px 100%; */
 	top: 30%;
-	background-color: none;
-
-
+	display: block;
 }
