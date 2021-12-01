@@ -12,15 +12,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	, optionMenu = document.getElementById("text-options")
 	, animationControl = document.getElementsByClassName("animation")
 	, textSpeed = 20
-	, oneCounter = 0
-	, twoCounter = 0
-	, threeCounter = 0
-	, totalAnimations = 10;
+	, eventID1 = 0
+	, eventID2 = 0
+	, eventID3 = 0;
 
 	//Show Game Window on load and load initial frame.
 	playerWindow.style.visibility = "visible";
 	hideAll();
-	loadNextFrame(null, "carrot_angry", 1);
+	loadNextFrame(null, "white", 3, 3);
 	/* How Frame drawing works: After verifying all button objects exist, we attach
 	event listeners to them. When any of the three buttons is pressed, we check which
 	event number we're at for each individual button (i.e., each button has its own
@@ -28,18 +27,32 @@ document.addEventListener("DOMContentLoaded", function() {
 	After loading, we return and exit the switch */
 	if (optionControl) {
 		optionControl[0].addEventListener("click", () => {
-			switch (oneCounter) {
+			switch (eventID1) {
 				//Quit
 				case 0:
-					loadNextFrame("all", "white", 0);
+					loadNextFrame("all", "white", 0, 0);
+					eventID1 = 1;
 					return
 				case 1:
-					console.log("increment test");
+					loadNextFrame("all", "white", 3, 3);
+					eventID1 = 0;
 					return
 			}
 		});
 		optionControl[1].addEventListener("click", () => {
-
+			switch (eventID2) {
+				case 0:
+					loadNextFrame("all", "orange", 1, 1);
+					eventID2 = parseInt(weightedRandom({1:0.8, 2:0.2}));
+					return
+				case 1:
+					loadNextFrame("all", "orange", 2, 1);
+					eventID2 = 0;
+					return
+				case 2:
+					loadNextFrame("all", "dollar_confirmed", 3, 3);
+					return
+			}
 		});
 		optionControl[2].addEventListener("click", () => {
 
@@ -57,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		,	newAni = document.getElementById(newAnimationID);
 		if (oldAni) { 
 			oldAni.src = "assets/blank.png"; 
-		} else if (oldAni == "all") {
+		} else if (oldAnimationID === "all") {
 			hideAll();
 		}
 		if (newAni) { 
@@ -90,8 +103,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	//Hides all animations
 	//NOTE: Hidden attributes cannot fire events, so we must use opacity instead.
 	function hideAll() {
-		for (var i = 0; i < totalAnimations; i++) {
+		for (var i = 0; i < animationControl.length; i++) {
 			animationControl[i].src = "assets/blank.png";
 		}
+	}
+	//Random Number generation w/ weighted probability 
+	function weightedRandom(prob) {
+	  let i, sum = 0, r = Math.random();
+	  for (i in prob) {
+	    sum += prob[i];
+	    if (r <= sum) return i;
+	  }
 	}
 });
