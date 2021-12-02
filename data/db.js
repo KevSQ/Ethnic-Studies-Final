@@ -63,7 +63,7 @@ const dialogue = {
 			},
 			{   //14
 				"name" : "",
-				"dialogue" : "...You've just moved from Mexico to the United States a couple months ago, pursuing a better life for you and your family. Currently, you work as taxi driver at an orange carrot majority business."
+				"dialogue" : "...You've just moved from Mexico to the United States a couple months ago, escaping the worsening living conitions your family experienced. Currently, you work as taxi driver at an orange carrot majority business."
 			},
 			{	//15
 				"name" : "",
@@ -79,7 +79,35 @@ const dialogue = {
 			},
 			{	//18
 				"name" : "Boss",
-				"dialogue" : "If you don't start to pick up more hours in five weeks, I'll report you to the authorities..."
+				"dialogue" : "If you don't start to pick up more hours in five weeks, I'll report you to the authorities!"
+			},
+			{	//19 (FAIL)
+				"name" : "",
+				"dialogue" : "Despite your best attempts, after five weeks, you lost your job. Now home with your family, you fear for what the future holds for you and your loved ones."
+			},
+			{	//20 (WIN CHAIN)
+				"name" : "",
+				"dialogue" : "Despite how simple this is, it probably took you a couple of attempts to get here, right?"
+			},
+			{	//21
+				"name" : "",
+				"dialogue" : "While this may have been presented with carrots and color, there are real humans out there working jobs where they can be fired at any moment."
+			},
+			{	//22
+				"name" : "",
+				"dialogue" : "Instead of this white carrot, it could be you, working in fear of discrimination and racism."
+			},
+			{	//23
+				"name" : "",
+				"dialogue" : "We hope that this short demo helped communicate why undocumented immigrants are no different than you and I. They SHOULD have their rights protected."
+			},
+			{	//24
+				"name" : "",
+				"dialogue" : "No matter if they're a white carrot, orange carrot, or blueberry. All rights matter."
+			},
+			{	//25
+				"name" : "",
+				"dialogue" : "Thank you for playing!"
 			}
 	],
 	"eventOptions": [

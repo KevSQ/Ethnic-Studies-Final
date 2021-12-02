@@ -29,14 +29,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	setTimeout( () => { loadNextFrame(null, "orange", 16, 6)}, 28000);
 	setTimeout( () => { loadNextFrame("all", "carrot_angry", 17, 6)}, 34000);
 	setTimeout( () => { loadNextFrame("all", "carrot_angry", 18, 6)}, 40000);
+	setTimeout( () => { optionMenu.style.opacity = 1 }, 43999);
 	setTimeout( () => { loadNextFrame("all", "carrot_angry", 3)}, 44000);
 	/* How Frame drawing works: After verifying all button objects exist, we attach
 	event listeners to them. When any of the three buttons is pressed, we check which
 	event number we're at for each individual button (i.e., each button has its own
 	tracker to make it easy to track what frame/event needs to be loaded next).
 	After loading, we return and exit the switch */
-
-	//setTimeout( () => { loadNextFrame})
 	if (optionControl) {
 		optionControl[0].addEventListener("click", () => {
 			switch (eventID1) {
@@ -49,6 +48,9 @@ document.addEventListener("DOMContentLoaded", function() {
 					loadNextFrame("all", "white", 3);
 					eventID1 = 0;
 					return
+				case 5:
+					loadNextFrame("all", "carrot_angry", 3);
+					resetEventIds();
 			}
 		});
 		optionControl[1].addEventListener("click", () => {
@@ -62,16 +64,45 @@ document.addEventListener("DOMContentLoaded", function() {
 					eventID2 = 0;
 					return
 				case 2:
-					loadNextFrame("all", "dollar_confirmed", 4, 3);
+					loadNextFrame("all", "dollar_confirmed", 4, 1);
+					eventID2 = 10;
 					return
 				case 3:
-					loadNextFrame("all", "dollar_confirmed", 5, 3);
+					loadNextFrame("all", "dollar_confirmed", 5, 1);
+					eventID2 = 10;
 					return
 				case 4:
-					loadNextFrame("all", "dollar_confirmed", 6, 3);
+					loadNextFrame("all", "dollar_confirmed", 6, 1);
+					eventID2 = 10;
 					return
 				case 5:
-					loadNextFrame("all", "dollar_confirmed", 7, 3);
+					loadNextFrame("all", "dollar_confirmed", 7, 1);
+					eventID2 = 10;
+					return
+				//Win Sequence
+				case 10:
+					loadNextFrame("all", "globe", 20, 1);
+					eventID2++;
+					return
+				case 11:
+					loadNextFrame("all", "globe", 21, 1);
+					eventID2++;
+					return
+				case 12:
+					loadNextFrame("all", "white", 22, 1);
+					eventID2++;
+					return
+				case 13:
+					loadNextFrame("all", "orange", 23, 1);
+					eventID2++;
+					return
+				case 14:
+					loadNextFrame("all", "globe", 24, 1);
+					eventID2++;
+					return
+				case 15:
+					loadNextFrame("all", "globe", 25, 6);
+					eventID2++;
 					return
 			}
 		});
@@ -83,16 +114,26 @@ document.addEventListener("DOMContentLoaded", function() {
 					return
 				case 1:
 					loadNextFrame("all", "papers_rejected", 9, 2);
+					//Fail ID
+					eventID3 = 5;
 					return
 				case 2:
-					loadNextFrame("all", "papers_confirmed", 10, 2);
+					loadNextFrame("all", "papers_confirmed", 10, 0);
+					//Win ID
+					eventID2 = 10;
+					return
+				case 3:
+					loadNextFrame("all", "globe", 3);
+					return
+				case 5:
+					loadNextFrame("all", "carrot_cry", 19, 5);
+					eventID1 = 5;
 					return
 			}
 		});
 	}
 
 	//Functions
-
 	/* Takes which animation to hide, which animation to display, and what text to load from the database file.
 	 If "all" is passed for the first argument, all IDs are hidden. You can also invoke
 	a specific options menu, although that is optional. If nothing is passed for it, it will load based on what was passed for
@@ -129,7 +170,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	//Anticipates an integer.
 	function presentOptions(accessNumber) {
 		var choices = dialogue.eventOptions[accessNumber].options;
-		optionMenu.style.opacity = 1;
 		for (var i = 0; i < choices.length; i++) {
 			writeText(optionControl[i], choices[i], textSpeed);
 		}
@@ -148,5 +188,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	    sum += prob[i];
 	    if (r <= sum) return i;
 	  }
+	}
+
+	function resetEventIds() {
+		eventID1 = 0;
+		eventID2 = 0;
+		eventID3 = 0;
 	}
 });
