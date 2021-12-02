@@ -24,7 +24,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	loadNextFrame(null, null, 11, 6);
 	setTimeout( () => { loadNextFrame(null, null, 12, 6)}, 8000 );
 	setTimeout( () => { loadNextFrame(null, null, 13, 6)}, 16000 );
-	loadNextFrame(null, "white", )
+	setTimeout( () => { loadNextFrame(null, "border_map", 14, 6)}, 18000 );
+	setTimeout( () => { loadNextFrame("all", "white", 15, 6)}, 24000);
+	setTimeout( () => { loadNextFrame(null, "orange", 16, 6)}, 28000);
+	setTimeout( () => { loadNextFrame("all", "carrot_angry", 17, 6)}, 34000);
+	setTimeout( () => { loadNextFrame("all", "carrot_angry", 18, 6)}, 40000);
+	setTimeout( () => { loadNextFrame("all", "carrot_angry", 3)}, 44000);
 	/* How Frame drawing works: After verifying all button objects exist, we attach
 	event listeners to them. When any of the three buttons is pressed, we check which
 	event number we're at for each individual button (i.e., each button has its own
@@ -37,11 +42,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			switch (eventID1) {
 				//Quit
 				case 0:
-					loadNextFrame("all", "food_bowl", 0, 0);
+					loadNextFrame("all", "food_bowl", 0);
 					eventID1 = 1;
 					return
 				case 1:
-					loadNextFrame("all", "white", 3, 3);
+					loadNextFrame("all", "white", 3);
 					eventID1 = 0;
 					return
 			}

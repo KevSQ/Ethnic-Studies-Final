@@ -63,11 +63,23 @@ const dialogue = {
 			},
 			{   //14
 				"name" : "",
-				"dialogue" : "...You've just moved from Whitelandia a couple months ago, in a pursuit for a new life for you and your family. You've been taking any and all jobs available to you in order to survive."
+				"dialogue" : "...You've just moved from Mexico to the United States a couple months ago, pursuing a better life for you and your family. Currently, you work as taxi driver at an orange carrot majority business."
 			},
-			{
+			{	//15
 				"name" : "",
-				"dialogue" : "This is you, the average White carrot from Whitelandia. You came with your partner and two kids, who are also all white carrots."
+				"dialogue" : "This is you, the average White carrot from Mexico. You came with your partner and two kids, who are also all white carrots."
+			},
+			{   //16
+				"name" : "",
+				"dialogue" : "Unfortunately, the US is known to be not very accepting of white carrots. As an orange carrot majority country, there's been years and years of inner-carrot race tension."
+			},
+			{	//17
+				"name" : "",
+				"dialogue" : "In fact, you've recently been having a lot of problems showing up at work. Your boss wants you to work extra hours, but you're already working 55 hours and simply can't do more."
+			},
+			{	//18
+				"name" : "Boss",
+				"dialogue" : "If you don't start to pick up more hours in five weeks, I'll report you to the authorities..."
 			}
 	],
 	"eventOptions": [
