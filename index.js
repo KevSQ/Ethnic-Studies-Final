@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				case 5:
 					loadNextFrame("all", "carrot_angry", 3);
 					resetEventIds();
+					return
 			}
 		});
 		optionControl[1].addEventListener("click", () => {
@@ -60,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function() {
 					eventID2 = parseInt(weightedRandom({1:0.8, 2:0.05, 3:0.05, 4:0.05, 5:0.05}));
 					return
 				case 1:
-					loadNextFrame("all", "orange", 2, 1);
-					eventID2 = 0;
+					loadNextFrame("all", "orange", 2, 5);
+					eventID1 = 5;
 					return
 				case 2:
 					loadNextFrame("all", "dollar_confirmed", 4, 1);
@@ -110,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			switch (eventID3) {
 				case 0:
 					loadNextFrame("all", "white", 8, 2);
-					eventID3 = parseInt(weightedRandom({1:0.7, 2:0.3}));
+					eventID3 = parseInt(weightedRandom({1:0.6, 2:0.4}));
 					return
 				case 1:
 					loadNextFrame("all", "papers_rejected", 9, 2);
@@ -118,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
 					eventID3 = 5;
 					return
 				case 2:
-					loadNextFrame("all", "papers_confirmed", 10, 0);
+					loadNextFrame("all", "papers_confirmed", 10, 1);
 					//Win ID
 					eventID2 = 10;
 					return
